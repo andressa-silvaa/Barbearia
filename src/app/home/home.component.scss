@@ -1,0 +1,60 @@
+body, html, .container{
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+#inicio{
+  background-image: url("../../assets/img/incio-bg.jpg");
+  background-color: #080B16;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#inicio .row{
+  color: white;
+  height: 100%;
+}
+#inicio .row h1, #sobre h2, #servicos h2{
+  font-weight: bolder;
+  font-size: 3em;
+}
+#inicio .row p{
+  font-weight: 300;
+  font-size: 1.5em;
+}
+#inicio .row button{
+  width: 40%;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+#sobre{
+  background-color: #0D121E;
+  color: white;
+}
+#sobre p{
+  font-size: 1.3em;
+  text-indent: 10px;
+  text-align: justify;
+  max-width: 90%;
+  margin: 10px;
+}
+#sobre h2{
+  text-indent: 20px;
+  margin-bottom: 30px;
+}
+
+#servicos p{
+  margin: 20px;
+}
+#servicos a{
+  font-weight: 600;
+}
