@@ -4,33 +4,40 @@ body, html, .container{
 }
 .container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   max-width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
 }
 
-#inicio{
+#inicio {
   background-image: url("../../assets/img/incio-bg.jpg");
   background-color: #080B16;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-#inicio .row{
+#inicio .row {
   color: white;
-  height: 100%;
+  text-align: center;
 }
-#inicio .row h1, #sobre h2, #servicos h2{
+
+#inicio .row h1, #sobre h2, #servicos h2 {
   font-weight: bolder;
   font-size: 3em;
 }
-#inicio .row p{
+
+#inicio .row p {
   font-weight: 300;
   font-size: 1.5em;
 }
-#inicio .row button{
+
+#inicio .row button {
   width: 40%;
   font-weight: 500;
   font-size: 1.5em;
@@ -51,10 +58,168 @@ body, html, .container{
   text-indent: 20px;
   margin-bottom: 30px;
 }
+#sobre .img1 {
+  max-width: 500px;
+  position: relative;
+  left: 5%;
+  top: 20%;
+}
 
+#sobre .img2 {
+  max-width: 350px;
+  position: relative;
+  left: -10%;
+  top: -10%;
+  z-index: 1;
+}
+
+#sobre .img3 {
+  max-width: 300px;
+  position: relative;
+  left: 60%;
+  top: -25%;
+  z-index: 0;
+}
+#servicos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 #servicos p{
-  margin: 20px;
+  margin: 10px 20px;
+  font-size: 1.3em;
 }
 #servicos a{
   font-weight: 600;
+}
+#servicos h2{
+  font-weight: 600;
+  margin: -100px auto 50px auto;
+
+}
+#servicos .card {
+  width: 20rem;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#servicos .card-img-top {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+#servicos .card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+#servicos .card-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#servicos .btn-dark {
+  margin: 0;
+  font-size: 1rem;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+
+.linha-preta {
+  background: linear-gradient(to bottom, #0D121E, black);
+  color: white;
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#equipe{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#equipe .card {
+  background-color: transparent;
+  width: 20rem;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 0;
+  border-radius: 10px;
+}
+
+#equipe .card-img-top {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+#equipe .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+}
+
+#equipe .card-title {
+  margin: 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  opacity: 0.3;
+  margin-top: -80px;
+  margin-bottom: 50px;
+}
+
+#equipe .card-body .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#equipe .card-body .social-icons img {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  object-fit: contain;
+}
+#equipe .card-body .social-icons img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.titulo-inclinado {
+  position: absolute;
+  transform: rotate(-90deg) translateX(-50%);
+  transform-origin: center;
+  font-size: 4em;
+  font-weight: bold;
+  color: #333;
+}
+.position-relative{
+  position: absolute;
+  top: 0%!important;
+  left: 5%;
 }
