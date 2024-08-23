@@ -1,0 +1,80 @@
+body, html, .container {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-custom {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-brand img {
+  max-height: 100px;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  font-size: 1.2em;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ddd;
+  font-weight: bolder;
+}
+
+.btn-outline-light {
+  color: white;
+  border-color: white;
+}
+
+.btn-outline-light:hover {
+  background-color: white;
+  color: black;
+}
+
+nav .btn {
+  font-weight: 700;
+}
+
+ul {
+  margin-left: 50px;
+}
+
+/* Custom styles for the offcanvas menu */
+.offcanvas-end {
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+}
+
+.offcanvas-header {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.offcanvas-header .btn-close {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+.offcanvas-body {
+  padding: 1rem;
+}
+
+.offcanvas-body .nav-item {
+  margin: 1rem 0;
+}
+
+.offcanvas-body .btn {
+  width: 100%;
+  color: black;
+}
+
+/* Hide the normal navbar when offcanvas is visible */
+body.offcanvas-open .navbar-collapse {
+  display: none !important;
+}
