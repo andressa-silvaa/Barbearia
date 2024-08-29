@@ -603,6 +603,29 @@ overflow: hidden;
     z-index: 0;
   }
 }
+@media (max-width: 600px) {
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+
+  .carousel-wrapper {
+    display: flex;
+    min-width: 100%;
+  }
+
+  .card {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-right: 10px; /* Espaçamento entre os cards */
+  }
+
+  /* Opcional: Adiciona scrollbar personalizada */
+  .carousel::-webkit-scrollbar {
+    display: none; /* Oculta a scrollbar padrão */
+  }
+}
 
 @media (max-width: 768px) and (min-width: 600px) {
   #sobre img {
@@ -611,7 +634,7 @@ overflow: hidden;
   }
 
   p {
-    padding: 50px 10px;
+    padding: 40px 10px;
   }
 
   #sobre .img1 {
