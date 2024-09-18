@@ -606,26 +606,29 @@ overflow: hidden;
 @media (max-width: 600px) {
   .carousel {
     display: flex;
-    overflow-x: auto;
+    overflow-x: scroll; /* Ativa o scroll horizontal */
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Permite arrastar com o dedo em dispositivos móveis */
+    width: 100%; /* Garante que o carrossel ocupe toda a largura */
   }
 
   .carousel-wrapper {
     display: flex;
-    min-width: 100%;
+    width: max-content; /* Garante que o wrapper tenha a largura necessária para acomodar todos os cards */
   }
 
   .card {
     flex: 0 0 auto;
-    width: 100%;
+    width: 80%; /* Ajusta a largura do card para caber confortavelmente */
     margin-right: 10px; /* Espaçamento entre os cards */
   }
 
-  /* Opcional: Adiciona scrollbar personalizada */
+  /* Oculta a scrollbar padrão */
   .carousel::-webkit-scrollbar {
-    display: none; /* Oculta a scrollbar padrão */
+    display: none;
   }
 }
+
 
 @media (max-width: 768px) and (min-width: 600px) {
   #sobre img {
@@ -770,4 +773,14 @@ overflow: hidden;
   display: flex;
   align-items: center;
   position: relative;
+}
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaçamento entre os cards */
+}
+
+.card {
+  flex: 0 0 30%; /* Cards lado a lado com largura de 30% */
+  margin: 0; /* Remove margens extras */
 }
