@@ -29,7 +29,7 @@ body, html, .container{
 
 #inicio .row h1, #sobre h2, #servicos h2 {
   font-weight: bolder;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 #inicio .row p {
@@ -142,6 +142,7 @@ body, html, .container{
   padding: 0;
 }
 
+
 .linha-preta {
   background: linear-gradient(to bottom, #0D121E, black);
   color: white;
@@ -151,6 +152,110 @@ body, html, .container{
   align-items: center;
   position: relative;
 }
+
+#equipe {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+  width: 100vw;
+}
+
+#equipe .card {
+  background-color: transparent;
+  height: 400px;
+  display: flex;
+  margin: 20px;
+  padding: 0;
+  border-radius: 10px;
+  border: none;
+  flex-shrink: 0;
+  flex: 0 0 auto;
+  align-items: center;
+  width: 20vw;
+  margin-right: 10px;
+  box-sizing: border-box;
+}
+
+#equipe .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+}
+
+#equipe .card-title {
+  margin: 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  opacity: 0.3;
+  margin-top: -80px;
+  margin-bottom: 50px;
+}
+
+#equipe .card-body .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#equipe .card-body .social-icons img {
+  width: 27px;
+  margin: -30px 10px 10px 10px;
+  object-fit: contain;
+}
+
+#equipe .card-body .social-icons img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.titulo-inclinado {
+  position: absolute;
+  transform: rotate(-90deg) translateX(-50%);
+  transform-origin: center;
+  left: -3%;
+  margin-top: 20px;
+  font-size: 3.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+.carrossel-equipes::-webkit-scrollbar {
+  display: none;
+}
+.carrossel-equipes {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  width: 100vw;
+  box-sizing: border-box;
+  padding-left: 10px;
+  overflow-y: hidden;
+}
+.equipes-cards{
+  position: relative;
+  left: 10%;
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+}
+#equipe .card-img-top {
+  justify-content: center;
+  width: 60%;
+  height: auto;
+  object-fit: cover;
+}
+
 .carousel-wrapper {
   display: flex;
   justify-content: center;
@@ -287,16 +392,16 @@ overflow: hidden;
 }
 
 .contato-icons img {
-  max-height: 40px;
+  max-height: 20px;
   width: auto;
   margin-right: 10px;
 }
 
 .contato-icons p {
   font-size: 1em;
-  margin: 20px 200px;
+  margin: 10px 100px;
   padding: 0;
-  font-weight: 600;
+  font-weight: 500;
   display: flex;
   align-items: center;
 }
@@ -311,7 +416,7 @@ overflow: hidden;
   background: linear-gradient(to right, #0D121E, black);
   color: white;
   display: flex;
-  border-top: 4px solid #0D121E;
+  border-top: 3px solid #0D121E;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -319,7 +424,7 @@ overflow: hidden;
 
 .footer p {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 
@@ -537,35 +642,33 @@ overflow: hidden;
 }
 @media (max-width: 1000px) {
   #servicos {
-    width: 100vw; /* Garante que a div ocupe a largura exata da tela */
-    overflow: hidden; /* Impede que o conteúdo transborde visualmente */
-    padding: 0; /* Remove padding, se houver */
-    margin: 0; /* Remove margin, se houver */
+    width: 100vw;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
   }
 
   .carousel {
     display: flex;
-    overflow-x: auto; /* Permite a rolagem horizontal */
+    overflow-x: auto;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; /* Suporte para toque em dispositivos móveis */
-    width: 80vw; /* Garante que o carrossel ocupe a largura total da viewport */
-    box-sizing: border-box; /* Inclui padding e border na largura total */
+    -webkit-overflow-scrolling: touch;
+    width: 80vw;
+    box-sizing: border-box;
   }
 
   .carousel-wrapper {
     display: flex;
-    flex-wrap: nowrap; /* Impede que os cards quebrem linha */
-    width: max-content; /* Ajusta o wrapper para caber todo o conteúdo */
+    flex-wrap: nowrap;
+    width: max-content;
   }
 
   .card {
     flex: 0 0 auto;
-    width: 90vw; /* Ajusta a largura do card para 90% da viewport */
-    margin-right: 5px; /* Reduz o espaçamento entre os cards */
-    box-sizing: border-box; /* Inclui padding e border na largura total */
+    width: 90vw;
+    margin-right: 5px;
+    box-sizing: border-box;
   }
-
-  /* Oculta a barra de rolagem padrão */
   .carousel::-webkit-scrollbar {
     display: none;
   }
@@ -614,7 +717,9 @@ overflow: hidden;
   p{
     padding: 50px 10px;
   }
-
+  h1{
+    margin-top: 50px;
+  }
   #sobre .img2 {
     max-width: 350px;
     position: relative;
@@ -646,156 +751,84 @@ overflow: hidden;
 
 
 
-.linha-preta {
-  background: linear-gradient(to bottom, #0D121E, black);
-  color: white;
-  width: 100vw;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
 
-#equipe {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  overflow: hidden;
-}
+@media (max-width: 1730px) {
+  .titulo-inclinado {
+    left: -5%;
+    font-size: 2.5em;
 
-#equipe .card {
-  background-color: transparent;
-  width: 20rem;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  padding: 0;
-  border-radius: 10px;
-  flex-shrink: 0;
-}
-
-#equipe .card-img-top {
-  width: 80%;
-  height: 350px;
-  object-fit: cover;
-}
-
-#equipe .card-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  background-color: transparent;
-  color: white;
-}
-
-#equipe .card-title {
-  margin: 0;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 900;
-  opacity: 0.3;
-  margin-top: -80px;
-  margin-bottom: 50px;
-}
-
-#equipe .card-body .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-#equipe .card-body .social-icons img {
-  width: 30px;
-  height: 30px;
-  margin: 10px;
-  object-fit: contain;
-}
-
-#equipe .card-body .social-icons img:hover {
-  transform: scale(1.2);
-  cursor: pointer;
-}
-
-.titulo-inclinado {
-  position: absolute;
-  transform: rotate(-90deg) translateX(-50%);
-  transform-origin: center;
-  font-size: 4em;
-  font-weight: bold;
-  color: #333;
-}
-.equipes-cards{
-  width: 60%;
-  position: relative;
-  left: 30%;
-}
-@media (max-width: 768px) {
-  #equipe {
-    width: 100vw; /* Garante que a div ocupe a largura exata da tela */
-    overflow: hidden; /* Impede que o conteúdo transborde visualmente */
-    padding: 0;
-    margin: 0;
   }
-  #equipe .card {
-    height: 350px;
-  }
-
   .equipes-cards{
-    position: relative;
-    left: 0%;
-    margin-right: 50px;
+    margin-top: -30px;
+    left: 5%;
   }
-
-  .carrossel-equipes {
-    display: flex;
-    overflow-x: auto; /* Permite a rolagem horizontal */
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; /* Suporte para toque em dispositivos móveis */
-    width: 100vw; /* Garante que o carrossel ocupe toda a largura da tela */
-    box-sizing: border-box; /* Inclui padding e borda na largura total */
-    padding-left: 10px; /* Adiciona um padding para evitar que os cards comecem muito colados à borda */
-    overflow-y: hidden; /* Impede a rolagem vertical */
-  }
-  .equipes-cards {
-    display: flex;
-    flex-wrap: nowrap; /* Impede que os cards quebrem linha */
-    width: max-content; /* Ajusta o wrapper para caber todo o conteúdo */
-    gap: 10px; /* Ajusta o espaço entre os cards */
-  }
-
   #equipe .card {
-    flex: 0 0 auto;
-    align-items: center;
-    width: 80vw; /* Ajusta a largura do card para 80% da viewport */
-    margin-right: 10px; /* Espaçamento entre os cards */
-    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    width: 35vw;
   }
-
   #equipe .card-img-top {
     width: 40%;
-    justify-content: center;
-    height: auto; /* Permite que a imagem se ajuste proporcionalmente */
-    object-fit: cover;
   }
-
-  .carrossel-equipes::-webkit-scrollbar {
-    display: none; /* Oculta a barra de rolagem padrão */
+  #equipe .card-body .social-icons img {
+    width: 25px;
+    margin-top: -30px;
   }
 }
+@media (max-width: 1000px) {
+  .titulo-inclinado {
+    left: -11%;
+    font-size: 2.5em;
 
-@media (max-width: 500px) {
-
-
+  }
+  .equipes-cards{
+    left: 10%;
+  }
+  #equipe .card {
+    width: 40vw;
+  }
+  #equipe .card-img-top {
+    width: 50%;
+  }
+  #equipe .card-body .social-icons img {
+    width: 25px;
+    margin-top: -30px;
+  }
+}
+@media (max-width: 768px) {
+  .titulo-inclinado {
+    font-size: 2.5em;
+    left: -15%;
+  }
+  .equipes-cards{
+    left: 15%;
+  }
+  #equipe .card {
+    width: 40vw;
+  }
   #equipe .card-img-top {
     width: 65%;
   }
-
-
+  #equipe .card-body .social-icons img {
+    width: 20px;
+    margin-top: -30px;
+  }
+}
+@media (max-width: 600px) {
+  .titulo-inclinado {
+    font-size: 2.5em;
+    left: -20%;
+  }
+  #equipe .card {
+    width: 80vw;
+    margin-right: 10px;
+  }
+  .equipes-cards{
+    left: 0%;
+  }
+  #equipe .card-img-top {
+    width: 40%;
+  }
+  #equipe .card-body .social-icons img {
+    width: 20px;
+    margin-top: -30px;
+  }
 }
